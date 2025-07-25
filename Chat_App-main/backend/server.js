@@ -7,7 +7,7 @@ const mongoose = require("mongoose");
 const app = express();
 
 const corsOptions = {
-	origin: 'https://realtime-chat-application-splitmates-projects.vercel.app/',
+	origin: "https://realtime-chat-application-git-main-splitmates-projects.vercel.app",
 	methods: ["GET", "POST", "DELETE"],
 	allowedHeaders: ["Content-Type", "Authorization"],
 	credentials: true,
