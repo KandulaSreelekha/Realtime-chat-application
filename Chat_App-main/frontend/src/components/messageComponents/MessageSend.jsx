@@ -122,14 +122,14 @@ const MessageSend = ({ chatId }) => {
                 </div>
             )} */}
 			<form
-				className="w-full flex items-center gap-1 h-[7vh] p-3 bg-slate-800 text-white"
+				className="w-full flex items-center gap-1 h-[7vh] p-3 bg-[#FFE5D0] text-[#3F3F46]"
 				onSubmit={(e) => e.preventDefault()}
 			>
 				<label htmlFor="media" className="cursor-pointer">
 					<FaFolderOpen
 						title="Open File"
 						size={22}
-						className="active:scale-75 hover:text-green-400"
+						className="active:scale-75 hover:text-[#FB923C]"
 					/>
 				</label>
 				<input
@@ -151,18 +151,18 @@ const MessageSend = ({ chatId }) => {
 				<span className="flex justify-center items-center">
 					{newMessage?.trim() && !isSendLoading && (
 						<button
-							className="outline-none p-2 border-slate-500 border-l"
+							className="outline-none p-2 border-[#FFD6B0] border-l"
 							onClick={handleSendMessage}
 						>
 							<FaPaperPlane
 								title="Send"
 								size={18}
-								className="active:scale-75 hover:text-green-400"
+								className="active:scale-75 hover:text-[#FB923C]"
 							/>
 						</button>
 					)}
 					{isSendLoading && (
-						<button className="outline-none p-2 border-slate-500 border-l">
+						<button className="outline-none p-2 border-[#FFD6B0] border-l">
 							<LuLoader
 								title="loading..."
 								fontSize={18}

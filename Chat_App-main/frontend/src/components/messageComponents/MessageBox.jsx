@@ -84,7 +84,7 @@ const MessageBox = ({ chatId }) => {
 	return (
 		<>
 			<div
-				className="py-6 sm:px-6 px-3 w-full h-[7vh] font-semibold flex justify-between items-center bg-slate-800 text-white cursor-pointer"
+				className="py-6 sm:px-6 px-3 w-full h-[7vh] font-semibold flex justify-between items-center bg-[#FFE5D0] text-[#3F3F46] cursor-pointer"
 				onClick={() => dispatch(setChatDetailsBox(true))}
 			>
 				<div className="flex items-center gap-2">
@@ -120,7 +120,7 @@ const MessageBox = ({ chatId }) => {
 				>
 					<div
 						ref={chatDetailsBox}
-						className="flex border border-slate-400 bg-slate-800 overflow-hidden rounded-lg"
+						className="flex border border-[#FFD6B0] bg-[#FFE5D0] overflow-hidden rounded-lg"
 					>
 						<ChatDetailsBox />
 					</div>

@@ -5,13 +5,12 @@
 body::-webkit-scrollbar,
 .scroll-style::-webkit-scrollbar {
 	width: 5px;
-	/* background: linear-gradient(to right, #ffffff00, rgb(255, 255, 255)); */
 	background: linear-gradient(
 		to right,
-		rgba(255, 255, 255, 0) 40%,
-		rgba(255, 255, 255, 0.5) 40%,
-		rgba(255, 255, 255, 0.5) 60%,
-		rgba(255, 255, 255, 0) 60%
+		rgba(255, 247, 237, 0) 40%,
+		rgba(255, 247, 237, 0.5) 40%,
+		rgba(255, 247, 237, 0.5) 60%,
+		rgba(255, 247, 237, 0) 60%
 	);
 }
 
@@ -19,20 +18,20 @@ body::-webkit-scrollbar-thumb,
 .scroll-style::-webkit-scrollbar-thumb {
 	width: 3px;
 	border-radius: 50px;
-	background-color: #1e293b;
-	box-shadow: inset 0px 0px 2px white;
+	background-color: #FB923C;
+	box-shadow: inset 0px 0px 2px #FFD6B0;
 }
 
 .scroll-style-x::-webkit-scrollbar {
 	height: 2px;
-	background-color: white;
+	background-color: #FFF8F1;
 }
 
 .scroll-style-x::-webkit-scrollbar-thumb {
 	height: 1px;
 	border-radius: 50px;
-	background-color: #1e293b;
-	box-shadow: inset 0px 0px 2px white;
+	background-color: #FB923C;
+	box-shadow: inset 0px 0px 2px #FFD6B0;
 }
 
 body {
@@ -80,11 +79,11 @@ body {
 .shimmer-animated {
 	background: linear-gradient(
 		to right,
-		#334155,
-		#1e293b,
-		#334155,
-		#1e293b,
-		#334155
+		#E5E7EB,
+		#D1D5DB,
+		#F3F4F6,
+		#D1D5DB,
+		#E5E7EB
 	);
 	background-size: 200% 100%;
 	animation: shimmer 3s linear infinite;
@@ -143,7 +142,7 @@ body {
 	margin-right: 3px;
 	width: 13px;
 	height: 13px;
-	background: white;
+	background: #FFE5D0;
 	border-radius: 13px;
 	animation: typing-animation 0.9s infinite alternate;
 }

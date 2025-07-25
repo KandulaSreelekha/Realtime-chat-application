@@ -1,6 +1,5 @@
 import React, { useEffect, useRef } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
-import Logo from "../assets/logo.jpeg";
 import { useDispatch, useSelector } from "react-redux";
 import { addAuth } from "../redux/slices/authSlice";
 import handleScrollTop from "../utils/handleScrollTop";
@@ -117,18 +116,11 @@ const Header = () => {
 	return (
 		<div
 			id="header"
-			className="w-full h-16 fixed top-0 z-50 md:h-20 shadow-gray-950 shadow-inner flex justify-between items-center p-4 font-semibold bg-slate-800 text-white"
+			className="w-full h-16 fixed top-0 z-50 md:h-20 shadow-[#FFD6B0] shadow-inner flex justify-between items-center p-4 font-semibold bg-[#FFE5D0] text-[#3F3F46]"
 		>
 			<div className="flex items-center justify-start gap-2">
 				<Link to={"/"}>
-					<img
-						src={Logo}
-						alt="ChatApp"
-						className="h-12 w-12 rounded-tr-full rounded-tl-full rounded-br-full"
-					/>
-				</Link>
-				<Link to={"/"}>
-					<span>ChatApp</span>
+					<span className="text-2xl md:text-3xl font-bold">ChatApp</span>
 				</Link>
 			</div>
 
@@ -157,7 +149,7 @@ const Header = () => {
 							e.preventDefault();
 							dispatch(setHeaderMenu(!isHeaderMenu));
 						}}
-						className="flex flex-nowrap transition-all items-center ml-3  border border-slate-400 rounded-full bg-gradient-to-tr to-slate-800 text-black via-white  from-slate-800 hover:bg-gradient-to-br shadow-sm  cursor-pointer"
+						className="flex flex-nowrap transition-all items-center ml-3 border border-[#FFD6B0] rounded-full bg-gradient-to-tr to-[#FFD6B0] text-[#3F3F46] via-[#FFF8F1] from-[#FFE5D0] hover:bg-gradient-to-br shadow-sm cursor-pointer"
 					>
 						<img
 							src={user.image}
@@ -175,14 +167,14 @@ const Header = () => {
 					{isHeaderMenu && (
 						<div
 							ref={headerMenuBox}
-							className="border border-slate-500 text-white w-40 h-24 py-2 flex flex-col justify-center rounded-md items-center gap-1 absolute top-16 right-4 z-40 bg-slate-700"
+							className="border border-[#FFD6B0] text-[#3F3F46] w-40 h-24 py-2 flex flex-col justify-center rounded-md items-center gap-1 absolute top-16 right-4 z-40 bg-[#FFE5D0]"
 						>
 							<div
 								onClick={() => {
 									dispatch(setHeaderMenu(false));
 									dispatch(setProfileDetail());
 								}}
-								className="flex flex-nowrap items-center w-full h-fit cursor-pointer justify-center hover:bg-slate-400 hover:text-black p-1"
+								className="flex flex-nowrap items-center w-full h-fit cursor-pointer justify-center hover:bg-[#FFD6B0] hover:text-[#FB923C] p-1"
 							>
 								<div className="flex items-center justify-between w-2/4">
 									<PiUserCircleLight fontSize={23} />
@@ -190,7 +182,7 @@ const Header = () => {
 								</div>
 							</div>
 							<div
-								className="flex flex-nowrap items-center w-full h-fit cursor-pointer justify-center hover:bg-slate-400 hover:text-black p-1"
+								className="flex flex-nowrap items-center w-full h-fit cursor-pointer justify-center hover:bg-[#FFD6B0] hover:text-[#FB923C] p-1"
 								onClick={handleLogout}
 							>
 								<div className="flex items-center justify-between w-2/4">
@@ -203,7 +195,7 @@ const Header = () => {
 				</div>
 			) : (
 				<Link to={"/signin"}>
-					<button className="py-2 px-4 border border-slate-400 rounded-full bg-gradient-to-tr to-slate-800 text-black via-white  from-slate-800 hover:bg-gradient-to-br shadow-sm hover:shadow-white">
+					<button className="py-2 px-4 border border-[#FFD6B0] rounded-full bg-gradient-to-tr to-[#FFD6B0] text-[#3F3F46] via-[#FFF8F1] from-[#FFE5D0] hover:bg-gradient-to-br shadow-sm hover:shadow-[#FFD6B0]">
 						SignIn
 					</button>
 				</Link>

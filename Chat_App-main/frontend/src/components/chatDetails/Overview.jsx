@@ -58,14 +58,14 @@ const Overview = () => {
 	};
 
 	return (
-		<div className="flex flex-col gap-2 text-white p-4">
+		<div className="flex flex-col gap-2 text-black p-4">
 			<div className="flex flex-col items-center justify-center gap-2 mb-3 mt-3">
 				<img
 					src={getChatImage(selectedChat, authUserId)}
 					alt=""
 					className="h-16 w-16 rounded-full"
 				/>
-				<div className="text-center leading-5 font-semibold text-lg flex items-center gap-1">
+				<div className="text-center leading-5 font-semibold text-lg flex items-center gap-1 text-black">
 					<h1>{getChatName(selectedChat, authUserId)}</h1>
 					{selectedChat?.isGroupChat && (
 						<CiCircleInfo
@@ -83,13 +83,13 @@ const Overview = () => {
 					<div className="flex gap-1">
 						<input
 							type="text"
-							className="w-full border border-slate-600 py-1 px-2 font-normal outline-none rounded-md cursor-pointer bg-transparent active:bg-black/20"
+							className="w-full border border-[#FFD6B0] py-1 px-2 font-normal outline-none rounded-md cursor-pointer bg-transparent active:bg-[#FFD6B0]/20 text-black placeholder:text-black"
 							value={changeName}
 							onChange={(e) => setChangeName(e.target.value)}
 						/>
 						<div
 							title="Change Name"
-							className="border border-slate-600 p-2 w-fit font-normal outline-none rounded-md cursor-pointer bg-transparent active:bg-black/20"
+							className="border border-[#FFD6B0] p-2 w-fit font-normal outline-none rounded-md cursor-pointer bg-transparent active:bg-[#FFD6B0]/20 text-black"
 							onClick={handleChangeName}
 						>
 							<RxUpdate fontSize={18} />
@@ -97,7 +97,7 @@ const Overview = () => {
 					</div>
 				</>
 			)}
-			<div className="min-h-0.5 w-full bg-slate-900/50"></div>
+			<div className="min-h-0.5 w-full bg-[#FFD6B0]"></div>
 			<div className="text-sm mt-1">
 				<h1>Created</h1>
 				<h2 className="opacity-50">

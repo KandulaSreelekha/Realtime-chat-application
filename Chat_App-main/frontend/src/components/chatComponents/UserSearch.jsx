@@ -94,14 +94,14 @@ const UserSearch = () => {
 	};
 	return (
 		<>
-			<div className="p-6 w-full h-[7vh] font-semibold flex justify-between items-center bg-slate-800 text-white border-slate-500 border-r">
+			<div className="p-6 w-full h-[7vh] font-semibold flex justify-between items-center bg-[#FFE5D0] text-black border-[#FFD6B0] border-r">
 				<h1 className="mr-2 whitespace-nowrap">New Chat</h1>
 				<div className="w-2/3 flex flex-nowrap items-center gap-2">
 					<input
 						id="search"
 						type="text"
 						placeholder="Search Users..."
-						className="w-full border border-slate-600 py-1 px-2 font-normal outline-none rounded-md cursor-pointer bg-transparent active:bg-black/20"
+						className="w-full border border-[#FFD6B0] py-1 px-2 font-normal outline-none rounded-md cursor-pointer bg-transparent active:bg-[#FFD6B0]/20 text-black placeholder:text-black"
 						onChange={(e) => setInputUserName(e.target?.value)}
 					/>
 					<label htmlFor="search" className="cursor-pointer">
@@ -125,7 +125,7 @@ const UserSearch = () => {
 							return (
 								<div
 									key={user?._id}
-									className="w-full h-16 border-slate-500 border rounded-lg flex justify-start items-center p-2 font-semibold gap-2 hover:bg-black/50 transition-all cursor-pointer text-white"
+									className="w-full h-16 border-[#FFD6B0] border rounded-lg flex justify-start items-center p-2 font-semibold gap-2 hover:bg-[#FFE5D0]/50 transition-all cursor-pointer text-black"
 									onClick={() => handleCreateChat(user._id)}
 								>
 									<img

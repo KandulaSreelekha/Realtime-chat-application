@@ -63,29 +63,29 @@ const SignIn = () => {
 		}
 	};
 	return (
-		<div className="flex flex-col items-center my-6 text-slate-300 min-h-[80vh]">
-			<div className="p-3 w-[80%] sm:w-[60%] md:w-[50%] lg:w-[40%] min-w-72 max-w-[1000px] border border-slate-400 bg-slate-800 rounded-lg h-fit  mt-5 transition-all">
-				<h2 className="text-2xl underline underline-offset-8 font-semibold text-slate-100 w-full text-center mb-4">
+		<div className="flex flex-col items-center my-6 text-[#FFD6B0] min-h-[80vh]">
+			<div className="p-3 w-[80%] sm:w-[60%] md:w-[50%] lg:w-[40%] min-w-72 max-w-[1000px] border border-[#FFD6B0] bg-[#FFE5D0] rounded-lg h-fit  mt-5 transition-all">
+				<h2 className="text-2xl underline underline-offset-8 font-semibold text-[#FB923C] w-full text-center mb-4">
 					SignIn ChatApp
 				</h2>
 				<form className="w-full flex justify-between flex-col">
-					<h3 className="text-xl font-semibold p-1">
+					<h3 className="text-xl font-semibold p-1 text-[#FB923C]">
 						Enter Email Address
 					</h3>
 					<input
-						className="w-full border border-slate-700 my-3 py-4 px-8 rounded-full flex justify-between bg-white text-black "
+						className="w-full border border-[#FFD6B0] my-3 py-4 px-8 rounded-full flex justify-between bg-[#FFF8F1] text-[#3F3F46] "
 						type="email"
 						placeholder="Enter Email Address"
 						name="email"
 						value={email}
 						onChange={(e) => setEmail(e.target.value)}
 					/>
-					<h3 className="text-xl font-semibold p-1">
+					<h3 className="text-xl font-semibold p-1 text-[#FB923C]">
 						Enter Password
 					</h3>
 					<div className="relative">
 						<input
-							className="w-full border border-slate-700 my-3 py-4 px-8 rounded-full flex justify-between bg-white text-black "
+							className="w-full border border-[#FFD6B0] my-3 py-4 px-8 rounded-full flex justify-between bg-[#FFF8F1] text-[#3F3F46] "
 							type={isShow ? "text" : "password"}
 							placeholder="Enter Password"
 							name="password"
@@ -94,7 +94,7 @@ const SignIn = () => {
 						/>
 						<span
 							onClick={() => setIsShow(!isShow)}
-							className="cursor-pointer text-black/80 absolute right-5 top-8"
+							className="cursor-pointer text-[#FB923C] absolute right-5 top-8"
 						>
 							{isShow ? (
 								<PiEyeClosedLight fontSize={22} />
@@ -108,27 +108,27 @@ const SignIn = () => {
 							e.preventDefault();
 							handleLogin(e);
 						}}
-						className="disabled:opacity-50 disabled:cursor-not-allowed w-full font-semibold hover:bg-black rounded-full px-5 py-4 mt-5 text-lg border border-slate-400  text-slate-400 hover:text-white bg-slate-700 transition-all"
+						className="disabled:opacity-50 disabled:cursor-not-allowed w-full font-semibold rounded-full px-5 py-4 mt-5 text-lg border border-[#FF9800] text-white bg-[#FF9800] hover:bg-[#FB923C] hover:text-white transition-all"
 					>
 						{load == "" ? "SignIn" : load}
 					</button>
 					<div className="w-full flex items-center mt-3">
-						<div className="w-full h-[1px] bg-slate-600"></div>
+						<div className="w-full h-[1px] bg-[#FFD6B0]"></div>
 						<Link to={"#"}>
-							<div className="p-3 font-semibold text-md hover:text-white whitespace-nowrap">
+							<div className="p-3 font-semibold text-md text-[#FF9800] hover:text-[#FB923C] transition-all whitespace-nowrap cursor-pointer bg-transparent rounded-none">
 								Forgot Password
 							</div>
 						</Link>
-						<div className="w-full h-[1px] bg-slate-600"></div>
+						<div className="w-full h-[1px] bg-[#FFD6B0]"></div>
 					</div>
 					<div className="w-full flex items-center my-3">
-						<div className="w-full h-[1px] bg-slate-600"></div>
+						<div className="w-full h-[1px] bg-[#FFD6B0]"></div>
 						<Link to="/signup">
-							<div className="p-3 font-semibold text-md hover:text-white">
+							<div className="p-3 font-semibold text-md text-[#FF9800] hover:text-[#FB923C] transition-all cursor-pointer bg-transparent rounded-none">
 								SignUp
 							</div>
 						</Link>
-						<div className="w-full h-[1px] bg-slate-600"></div>
+						<div className="w-full h-[1px] bg-[#FFD6B0]"></div>
 					</div>
 				</form>
 			</div>

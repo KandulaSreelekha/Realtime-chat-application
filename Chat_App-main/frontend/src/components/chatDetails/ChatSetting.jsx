@@ -114,13 +114,13 @@ const ChatSetting = () => {
 	};
 
 	return (
-		<div className="flex flex-col p-2 gap-2 text-white relative h-full z-10 overflow-auto scroll-style">
-			<h1 className="font-semibold text-lg w-full text-center my-2">
+		<div className="flex flex-col p-2 gap-2 text-black relative h-full z-10 overflow-auto scroll-style">
+			<h1 className="font-semibold text-lg w-full text-center my-2 text-black">
 				Setting
 			</h1>
 			<div
 				onClick={handleClearChat}
-				className="w-full h-8 border-slate-500 border text-sm rounded-lg flex justify-between items-center p-2 font-normal gap-2 transition-all cursor-pointer text-white"
+				className="w-full h-8 border-[#FFD6B0] border text-sm rounded-lg flex justify-between items-center p-2 font-normal gap-2 transition-all cursor-pointer text-black"
 			>
 				<h1>Clear Chat</h1>
 				<CiCircleInfo
@@ -136,7 +136,7 @@ const ChatSetting = () => {
 			{selectedChat?.isGroupChat ? (
 				<div
 					onClick={handleDeleteGroup}
-					className="w-full h-8 border-slate-500 border text-sm rounded-lg flex justify-between items-center p-2 font-normal gap-2 transition-all cursor-pointer text-white"
+					className="w-full h-8 border-[#FFD6B0] border text-sm rounded-lg flex justify-between items-center p-2 font-normal gap-2 transition-all cursor-pointer text-black"
 				>
 					<h1>Delete Group</h1>
 					<CiCircleInfo
@@ -148,7 +148,7 @@ const ChatSetting = () => {
 			) : (
 				<div
 					onClick={handleDeleteChat}
-					className="w-full h-8 border-slate-500 border text-sm rounded-lg flex justify-between items-center p-2 font-normal gap-2 transition-all cursor-pointer text-white"
+					className="w-full h-8 border-[#FFD6B0] border text-sm rounded-lg flex justify-between items-center p-2 font-normal gap-2 transition-all cursor-pointer text-black"
 				>
 					<h1>Delete Chat</h1>
 					<CiCircleInfo
@@ -161,11 +161,7 @@ const ChatSetting = () => {
 			{isConfirm && (
 				<div className="px-2 w-full fixed bottom-1 right-0">
 					<div
-						className={`w-full h-12 border-slate-500 ${
-							isConfirm === "clear-chat"
-								? "bg-blue-950"
-								: "bg-red-950"
-						}  border rounded-lg flex justify-between items-center p-2 font-semibold gap-2 transition-all cursor-pointer text-white `}
+						className={`w-full h-12 border-[#FFD6B0] bg-[#FFD6B0] border rounded-lg flex justify-between items-center p-2 font-semibold gap-2 transition-all cursor-pointer text-black`}
 					>
 						<h1>
 							{isConfirm === "clear-chat"
@@ -179,7 +175,7 @@ const ChatSetting = () => {
 								onClick={() => {
 									setConfirm("");
 								}}
-								className="border border-slate-600 p-1.5 w-fit font-normal outline-none rounded-md cursor-pointer bg-transparent active:bg-black/20"
+								className="border border-[#FFD6B0] p-1.5 w-fit font-normal outline-none rounded-md cursor-pointer bg-transparent active:bg-[#FFD6B0]/20 text-black"
 							>
 								<VscError fontSize={19} />
 							</div>
@@ -189,7 +185,7 @@ const ChatSetting = () => {
 										? handleClearChatCall
 										: handleDeleteChatCall
 								}
-								className="border border-slate-600 p-1.5 w-fit font-normal outline-none rounded-md cursor-pointer bg-transparent active:bg-black/20"
+								className="border border-[#FFD6B0] p-1.5 w-fit font-normal outline-none rounded-md cursor-pointer bg-transparent active:bg-[#FFD6B0]/20 text-black"
 							>
 								<IoCheckmarkCircleOutline fontSize={19} />
 							</div>

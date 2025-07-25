@@ -12,12 +12,12 @@ const ChatDetailsBox = () => {
 	const [detailView, setDetailView] = useState("overview");
 	return (
 		<>
-			<div className="w-fit h-[60vh] p-2 flex flex-col gap-1.5 bg-slate-900">
+			<div className="w-fit h-[60vh] p-2 flex flex-col gap-1.5 bg-[#FFE5D0]">
 				<div
-					className={`flex gap-2 items-center p-1 text-white rounded-md px-2 cursor-pointer ${
+					className={`flex gap-2 items-center p-1 text-black rounded-md px-2 cursor-pointer ${
 						detailView === "overview"
-							? "bg-blue-950"
-							: "bg-slate-800"
+							? "bg-[#FB923C]"
+							: "bg-[#FFD6B0]"
 					}`}
 					onClick={() => setDetailView("overview")}
 					title="Overview"
@@ -27,10 +27,10 @@ const ChatDetailsBox = () => {
 				</div>
 				{selectedChat?.isGroupChat && (
 					<div
-						className={`flex gap-2 items-center p-1 text-white rounded-md px-2 cursor-pointer ${
+						className={`flex gap-2 items-center p-1 text-black rounded-md px-2 cursor-pointer ${
 							detailView === "members"
-								? "bg-blue-950"
-								: "bg-slate-800"
+								? "bg-[#FB923C]"
+								: "bg-[#FFD6B0]"
 						}`}
 						onClick={() => setDetailView("members")}
 						title="Member"
@@ -40,10 +40,10 @@ const ChatDetailsBox = () => {
 					</div>
 				)}
 				<div
-					className={`flex gap-2 items-center p-1 text-white rounded-md px-2 cursor-pointer ${
+					className={`flex gap-2 items-center p-1 text-black rounded-md px-2 cursor-pointer ${
 						detailView === "setting"
-							? "bg-blue-950"
-							: "bg-slate-800"
+							? "bg-[#FB923C]"
+							: "bg-[#FFD6B0]"
 					}`}
 					onClick={() => setDetailView("setting")}
 					title="Setting"

@@ -98,13 +98,13 @@ const AllMessages = ({ allMessage }) => {
                                 <div
                                     className={`${
                                         message?.sender?._id === adminId
-                                            ? "bg-gradient-to-tr to-slate-800 from-green-400 rounded-s-lg rounded-ee-2xl"
-                                            : "bg-gradient-to-tr to-slate-800 from-white rounded-e-lg rounded-es-2xl"
+                                            ? "bg-gradient-to-tr to-[#FFD6B0] from-[#FB923C] rounded-s-lg rounded-ee-2xl"
+                                            : "bg-gradient-to-tr to-[#FFF8F1] from-[#FFE5D0] rounded-e-lg rounded-es-2xl"
                                     } py-1.5 px-2 min-w-10 text-start flex flex-col relative max-w-[85%]`}
                                 >
                                     {message?.chat?.isGroupChat &&
                                         message?.sender?._id !== adminId && (
-                                            <span className="text-xs font-bold text-start text-green-900">
+                                            <span className="text-xs font-bold text-start text-[#FB923C]">
                                                 {message?.sender?.firstName}
                                             </span>
                                         )}

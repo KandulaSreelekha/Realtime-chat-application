@@ -18,6 +18,7 @@ import NotificationBox from "./components/NotificationBox";
 
 const Applayout = () => {
     const [toastPosition, setToastPosition] = useState("bottom-left");
+
     const isProfileDetails = useSelector(
         (store) => store.condition.isProfileDetail
     );
@@ -28,6 +29,7 @@ const Applayout = () => {
         (store) => store.condition.isNotificationBox
     );
     const isLoading = useSelector((store) => store.condition.isLoading);
+
     useEffect(() => {
         const handleResize = () => {
             if (window.innerWidth >= 600) {
@@ -42,8 +44,9 @@ const Applayout = () => {
             window.removeEventListener("resize", handleResize);
         };
     }, []);
+
     return (
-        <div>
+        <div className="bg-[#FFF8F1] text-[#3F3F46]">
             <ToastContainer
                 position={toastPosition}
                 autoClose={3000}
@@ -54,18 +57,19 @@ const Applayout = () => {
                 pauseOnFocusLoss
                 draggable
                 pauseOnHover
-                theme="dark"
+                theme="light"
                 stacked
                 limit={3}
                 toastStyle={{
-                    border: "1px solid #dadadaaa",
+                    border: "1px solid #FB923C",
                     textTransform: "capitalize",
+                    backgroundColor: "#FFF7ED",
+                    color: "#3F3F46",
                 }}
-                // transition:Bounce
             />
             <Header />
             <div className="h-16 md:h-20"></div>
-            <div className="min-h-[85vh] p-2 sm:p-4  bg-gradient-to-tr to-black via-blue-900 from-black">
+            <div className="min-h-[85vh] p-2 sm:p-4 bg-gradient-to-tr to-[#FFD6B0] via-[#FFF8F1] from-[#FFE5D0]">
                 <Outlet />
                 {isProfileDetails && <ProfileDetail />}
                 {isGroupChatBox && <GroupChatBox />}
@@ -76,6 +80,7 @@ const Applayout = () => {
         </div>
     );
 };
+
 const routers = createBrowserRouter([
     {
         path: "/",

@@ -48,40 +48,45 @@ const MyChat = () => {
     }, [newMessageId, isGroupChatId]);
     return (
         <>
-            <div className="p-6 w-full h-[7vh] font-semibold flex justify-between items-center bg-slate-800 text-white border-slate-500 border-r">
-                <h1 className="mr-2 whitespace-nowrap">My Chat</h1>
+            {/* Header */}
+            <div className="p-6 w-full h-[7vh] font-semibold flex justify-between items-center bg-[#FFE5D0] text-black border-[#FFD6B0] border-r">
+                <h1 className="mr-2 whitespace-nowrap text-black">My Chat</h1>
                 <div
-                    className="flex items-center gap-2 border border-slate-600 py-1 px-2 rounded-md cursor-pointer hover:bg-slate-600 active:bg-black/20"
+                    className="flex items-center gap-2 border border-[#FFD6B0] py-1 px-2 rounded-md cursor-pointer hover:bg-[#FFD6B0]/50 active:bg-[#FFE5D0]"
                     title="Create New Group"
                     onClick={() => dispatch(setGroupChatBox())}
                 >
-                    <h1 className="line-clamp-1 lin whitespace-nowrap w-full">
+                    <h1 className="line-clamp-1 whitespace-nowrap w-full text-black">
                         New Group
                     </h1>
-                    <FaPenAlt />
+                    <FaPenAlt className="text-black" />
                 </div>
             </div>
-            <div className="flex flex-col w-full px-4 gap-1 py-2 overflow-y-auto overflow-hidden scroll-style h-[73vh]">
-                {myChat.length == 0 && isChatLoading ? (
+
+            {/* Chat List */}
+            <div className="flex flex-col w-full px-4 gap-1 py-2 overflow-y-auto scroll-style h-[73vh] bg-[#FFF8F1] text-[#3F3F46]">
+                {myChat.length === 0 && isChatLoading ? (
                     <ChatShimmer />
                 ) : (
                     <>
                         {myChat?.length === 0 && (
-                            <div className="w-full h-full flex justify-center items-center text-white">
+                            <div className="w-full h-full flex justify-center items-center">
                                 <h1 className="text-base font-semibold">
                                     Start a new conversation.
                                 </h1>
                             </div>
                         )}
                         {myChat?.map((chat) => {
+                            const isSelected = selectedChat?._id === chat?._id;
+
                             return (
                                 <div
                                     key={chat?._id}
-                                    className={`w-full h-16 border-slate-500 border rounded-lg flex justify-start items-center p-2 font-semibold gap-2 hover:bg-black/55 to-slate-800  via-slate-300  from-slate-800 transition-all cursor-pointer ${
-                                        selectedChat?._id == chat?._id
-                                            ? "bg-gradient-to-tr text-black"
-                                            : "text-white"
-                                    }`}
+                                    className={`w-full h-16 border border-[#FFD6B0] rounded-lg flex justify-start items-center p-2 font-semibold gap-2 transition-all cursor-pointer
+                                        ${isSelected
+                                            ? "bg-[#FFD6B0] text-black"
+                                            : "hover:bg-[#FFE5D0] text-black"
+                                        }`}
                                     onClick={() => {
                                         dispatch(addSelectedChat(chat));
                                     }}
@@ -98,37 +103,24 @@ const MyChat = () => {
                                             </span>
                                             <span className="text-xs font-light ml-1">
                                                 {chat?.latestMessage &&
-                                                    SimpleTime(
-                                                        chat?.latestMessage
-                                                            ?.createdAt
-                                                    )}
+                                                    SimpleTime(chat?.latestMessage?.createdAt)}
                                             </span>
                                         </div>
-                                        <span className="text-xs font-light line-clamp-1 ">
+                                        <span className="text-xs font-light line-clamp-1">
                                             {chat?.latestMessage ? (
                                                 <div className="flex items-end gap-1">
                                                     <span>
-                                                        {chat?.latestMessage
-                                                            ?.sender?._id ===
-                                                            authUserId && (
-                                                            <VscCheckAll
-                                                                color="white"
-                                                                fontSize={14}
-                                                            />
+                                                        {chat?.latestMessage?.sender?._id === authUserId && (
+                                                            <VscCheckAll color="#FB923C" fontSize={14} />
                                                         )}
                                                     </span>
                                                     <span className="line-clamp-1">
-                                                        {
-                                                            chat?.latestMessage
-                                                                ?.message
-                                                        }
+                                                        {chat?.latestMessage?.message}
                                                     </span>
                                                 </div>
                                             ) : (
                                                 <span className="text-xs font-light">
-                                                    {SimpleDateAndTime(
-                                                        chat?.createdAt
-                                                    )}
+                                                    {SimpleDateAndTime(chat?.createdAt)}
                                                 </span>
                                             )}
                                         </span>
@@ -143,4 +135,4 @@ const MyChat = () => {
     );
 };
 
-export default MyChat;
+export default MyChat; 
