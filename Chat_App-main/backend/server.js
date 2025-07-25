@@ -6,12 +6,24 @@ const mongoose = require("mongoose");
 
 const app = express();
 
+const allowedOrigins = [
+	"https://realtime-chat-application-git-main-splitmates-projects.vercel.app",
+	"https://realtime-chat-application-ecru.vercel.app",
+	"https://realtime-chat-application-eu7hxqx3c-splitmates-projects.vercel.app",
+];
 const corsOptions = {
-	origin: "https://realtime-chat-application-git-main-splitmates-projects.vercel.app",
+	origin: function (origin, callback) {
+		if (!origin || allowedOrigins.includes(origin)) {
+			callback(null, true);
+		} else {
+			callback(new Error("Not allowed by CORS"));
+		}
+	},
 	methods: ["GET", "POST", "DELETE"],
 	allowedHeaders: ["Content-Type", "Authorization"],
 	credentials: true,
 };
+
 
 app.use(cors(corsOptions));
 app.use(express.json());
