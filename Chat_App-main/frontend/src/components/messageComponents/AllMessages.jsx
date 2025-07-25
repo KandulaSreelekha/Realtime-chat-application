@@ -79,7 +79,7 @@ const AllMessages = ({ allMessage }) => {
                             <div
                                 className={`flex items-start gap-1 ${
                                     message?.sender?._id === adminId
-                                        ? "flex-row-reverse text-white"
+                                        ? "flex-row-reverse text-black"
                                         : "flex-row text-black"
                                 }`}
                             >
@@ -104,7 +104,7 @@ const AllMessages = ({ allMessage }) => {
                                 >
                                     {message?.chat?.isGroupChat &&
                                         message?.sender?._id !== adminId && (
-                                            <span className="text-xs font-bold text-start text-[#FB923C]">
+                                            <span className="text-xs font-bold text-start text-black">
                                                 {message?.sender?.firstName}
                                             </span>
                                         )}
@@ -119,7 +119,7 @@ const AllMessages = ({ allMessage }) => {
                                             {message?.message}
                                         </span>
                                         <span
-                                            className="text-[11px] font-light absolute bottom-1 right-2 flex items-end gap-1.5"
+                                            className="text-[11px] font-light absolute bottom-1 right-2 flex items-end gap-1.5 text-black"
                                             title={SimpleDateAndTime(
                                                 message?.updatedAt
                                             )}
@@ -128,7 +128,7 @@ const AllMessages = ({ allMessage }) => {
                                             {message?.sender?._id ===
                                                 adminId && (
                                                 <VscCheckAll
-                                                    color="white"
+                                                    color="black"
                                                     fontSize={14}
                                                 />
                                             )}
