@@ -1,12 +1,5 @@
 # Chat Application MERN-Stack Web Application.
 
-<p align="center">
-  <b style="color: blue;  ">Visitor count</b>
-  <br>
-  <a style="" href="https://github.com/akashdeep023">
-  <img src="https://profile-counter.glitch.me/chat-app/count.svg" />
-  </a>
-</p>
 
 ---
 
