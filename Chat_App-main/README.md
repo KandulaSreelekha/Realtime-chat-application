@@ -1,10 +1,5 @@
 # Chat Application MERN-Stack Web Application.
 
-
----
-
-
-
 ---
 
 ## Project Overview
