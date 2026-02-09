@@ -10,7 +10,7 @@
 
 **A modern, real-time chat application built with the MERN stack featuring group chats, instant messaging, and multi-user session support.**
 
-[Live Demo](realtime-chat-application-ecru.vercel.app) • [Report Bug](https://github.com/KandulaSreelekha/Realtime-chat-application/issues) • [Request Feature](https://github.com/akashdeep023/Chat_App/issues/issues)
+[Live Demo](realtime-chat-application-ecru.vercel.app) • [Report Bug](https://github.com/KandulaSreelekha/Realtime-chat-application/issues) • [Request Feature](https://github.com/KandulaSreelekha/Realtime-chat-application/issues/issues)
 
 </div>
 
