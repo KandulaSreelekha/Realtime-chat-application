@@ -237,7 +237,7 @@ This project is licensed under the ISC License - see the [LICENSE](LICENSE) file
 
 ## 👨‍💻 Author
 
-**Akash Deep**
+**Sreelekha**
 - Email: contact.kandulasreelekha@gmail.com
 - LinkedIn: [Sreelekha](https://www.linkedin.com/in/sreelekha06/)
 - GitHub: [Sreelekha](https://github.com/KandulaSreelekha)
